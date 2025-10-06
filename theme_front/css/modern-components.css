@@ -1,0 +1,300 @@
+/* Modern Components for Museo Histórico Guácaras */
+
+/* Glass morphism effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Floating action button */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #f1dca7 0%, #d4b876 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a2c1e;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 20px rgba(241, 220, 167, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(241, 220, 167, 0.6);
+  color: #4a2c1e;
+}
+
+/* Modern progress bar */
+.progress-modern {
+  height: 6px;
+  background: rgba(74, 44, 30, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-modern .progress-bar {
+  background: linear-gradient(90deg, #f1dca7 0%, #d4b876 100%);
+  transition: width 0.6s ease;
+}
+
+/* Breadcrumb modern */
+.breadcrumb-modern {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-modern .breadcrumb-item {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-modern .breadcrumb-item.active {
+  color: #4a2c1e;
+  font-weight: 500;
+}
+
+.breadcrumb-modern .breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: #adb5bd;
+  font-weight: bold;
+}
+
+/* Modern alert */
+.alert-modern {
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #f1dca7 0%, #d4b876 100%);
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Tooltip modern */
+.tooltip-modern {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip-modern::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.tooltip-modern:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Modern scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: rgba(74, 44, 30, 0.9);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background: #4a2c1e;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Modern search box */
+.search-modern {
+  position: relative;
+}
+
+.search-modern input {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(74, 44, 30, 0.1);
+  border-radius: 25px;
+  padding: 12px 50px 12px 20px;
+  transition: all 0.3s ease;
+}
+
+.search-modern input:focus {
+  border-color: #f1dca7;
+  box-shadow: 0 0 0 0.2rem rgba(241, 220, 167, 0.25);
+  background: white;
+}
+
+.search-modern .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+/* Modern tabs */
+.nav-tabs-modern {
+  border: none;
+  justify-content: center;
+}
+
+.nav-tabs-modern .nav-link {
+  border: none;
+  border-radius: 25px;
+  margin: 0 10px;
+  padding: 10px 25px;
+  color: #6c757d;
+  background: rgba(108, 117, 125, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-tabs-modern .nav-link:hover {
+  color: #4a2c1e;
+  background: rgba(74, 44, 30, 0.1);
+}
+
+.nav-tabs-modern .nav-link.active {
+  color: white;
+  background: linear-gradient(135deg, #4a2c1e 0%, #5d3525 100%);
+}
+
+/* Parallax sections */
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallax-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Modern timeline */
+.timeline-modern {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-modern::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(135deg, #f1dca7 0%, #d4b876 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #f1dca7;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #f1dca7;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .fab {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .scroll-to-top {
+    bottom: 80px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .search-modern input {
+    font-size: 14px;
+  }
+}
