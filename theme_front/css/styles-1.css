@@ -1,0 +1,857 @@
+/* Fuentes */
+@font-face {
+    font-family: 'Montserrat SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Montserrat BoldItalic';
+    src: url('../fonts/Montserrat-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'Montserrat Medium';
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+html,body{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+/* Estilos logo de carga */
+#cnt_logo_carga{
+	background-image: url('../img/fondo_logo.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10000;
+}
+#logo_carga{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#logo_carga img{
+	width: 92.78%;
+}
+.animated {
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes flash {
+	0%,20%,40%,60%,80%,100% {
+		opacity: 1;
+		width: 92.78%;
+	}
+	10%,30%,50%,70%,90% {
+		opacity: 0.80;
+		width: 88%;
+	}
+}
+@keyframes flash {
+	0%,20%,40%,60%,80%,100% {
+		opacity: 1;
+		width: 92.78%;
+	}
+	10%,30%,50%,70%,90% {
+		opacity: 0.80;
+		width: 88%;
+
+	}
+}
+.flash {
+	-webkit-animation-name: flash;
+	animation-name: flash;
+}
+/* Estilos formulario de visita */
+#cnt_formulario{
+	background-image: url('../img/fondo_logo.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	flex: 1;
+	padding-top: 9%;
+	display: none;
+	/* display: flex; */
+	flex-direction: column;
+	align-items: center;	
+}
+#cnt_formulario .logo_formulario{
+	display: flex;
+	justify-content: center;
+	z-index: 9000;
+}
+#cnt_formulario .logo_formulario img{
+	width: 71.76%;
+}
+#cnt_formulario .form_contenedor{
+	flex: 1;
+	width: 84%;	
+	background-color: rgba(255, 255, 255, 0.50);
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(92,92,92,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(92,92,92,1);
+	box-shadow: 0px 0px 10px 0px rgba(92,92,92,1);
+	margin-top: -23%;
+	border-radius: 15px 15px 0px 0px;
+	padding-top: 25%;
+}
+.form_contenedor .body_form{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;	
+}
+.body_form .f_titu{
+	font-family: "Montserrat BoldItalic";
+	font-size: 6.019vw;
+	color: #AE9D68;
+}
+.body_form .f_subtitu{
+	font-family: "Montserrat Medium";
+	font-size: 4.167vw;
+	color: #3F2619;
+}
+.body_form .form_visita{
+	text-align: left;
+	width: 84%;
+	padding-top: 2%;
+}
+.form_visita .form-group{
+	margin-bottom: 0rem!important;
+}
+.form_visita label{
+	font-family: "Montserrat Regular";
+	color: #000;
+	font-size: 2.778vw;
+	padding-left: 3.5%;
+	margin-bottom: 0.1rem;
+}
+.form_visita .form-control {
+    color: #3C3C3B;
+    background-color: #D6CEB4;
+    font-size: 2.315vw;
+    min-height: 5vh;
+}
+.form_visita .btn_form{
+	padding-top: 9%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 9%;
+	display: flex;
+	justify-content: space-between;
+	font-family: "Montserrat SemiBold";	
+}
+.btn_form .btn_reg_visita{
+	background-color: #546122;
+	color: #fff;
+	width: 58%;		
+	font-size: 3.426vw;	
+}
+.btn_form .btn_cerrar{
+	background-color: #3F2619;
+	color: #fff;
+	width: 35%;
+	font-size: 3.426vw;	
+}
+/* Estilos pantalla inicio salas */
+#cnt_principal{
+	background-image: url('../img/fondo_logo.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: none;
+	flex-direction: column;
+	flex: 1;
+	height: 94.79%;
+	min-height: 320px;
+}
+#cnt_principal header{
+	background-color: rgba(255, 255, 255, 0.0);
+	display: flex;
+	height: 15.89vh;
+	width: 100vw;
+	align-items: end;
+	overflow: visible;
+	z-index: 8999;
+	border: 1.56vh solid black;
+	border-image-source: url('../img/border_bottom.png');
+	border-image-slice: 100;
+	border-top: 0px;
+	border-image-repeat: round;
+}
+#cnt_principal header .logo_header{
+	padding-left: 6.95vw;
+	margin-bottom: -13%;
+}
+#cnt_principal header .logo_header img{	
+	width: 28.70vw;	
+}
+#cnt_principal header .titulo_header{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1.56vh;
+	padding-left: 2.78vw;
+	color: #3F2619;
+}
+.titulo_header span:nth-child(1){	
+	font-family: "Montserrat Bold";
+	font-size: 5.278vw;
+	line-height: 2.396vh;
+} 
+.titulo_header span:nth-child(2){
+	font-family: "Montserrat Medium";
+	font-size: 4.352vw;
+	line-height: 2.396vh;
+} 
+#cnt_principal section{
+	flex: 1;
+	background-image: url('../img/fondo_salas.png');
+	background-size: 100vw 100vh;
+	padding-top: 7%;
+	overflow-y: scroll;
+}
+
+#cnt_principal section .cnt_salas{
+	display: flex;
+	flex-direction: column;
+	/* height: 18.594vh; */
+}
+.cnt_salas a{
+	display: flex;
+	width: 100%;
+	/* min-height: 100%;
+	max-height: 18.594vh; */
+	text-decoration: none;
+	color: #3F2619;
+}
+.cnt_salas .sala_cnt_info{
+	display: flex;
+	flex-direction: column;
+	min-width: 31.7vw;
+	max-width: 31.7vw;
+	padding-right: 1%;
+}
+.sala_cnt_info .esp_1{
+	min-height: 25%;
+	width: 100%;
+	display: flex;
+}
+.sala_cnt_info .esp_1 span{
+	font-family: "Montserrat Bold";
+	font-size: 2.593vw;
+	text-align: right;
+	line-height: 2.778vw;
+	padding-left: 20%;
+	padding-top: 15%;
+	padding-right: 5%;
+	display: none;
+}
+.cnt_salas > a:nth-child(1) .esp_1 span{
+	display: block;
+}
+.cnt_salas > a:nth-child(1) .esp_1 span::before {
+  content: "ACCESO PRINCIPAL";
+}
+.sala_cnt_info .sala_header{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding-top: 13%;
+}
+.sala_cnt_info .sala_header .sala_cnt_titu{
+	display: flex;
+	height: 5.75vh;
+	margin-top: 7%;
+}
+.sala_cnt_titu .sala_cont_ico{
+	height: 5.75vh;
+	padding-left: 12%;
+	min-width: 32.5%;
+	max-width: 32.5%;
+	z-index: 7000;
+}
+.sala_cont_ico .sala_ico{
+	height: 5.75vh;
+	max-width: 100%;
+	border-radius: 0 0 20px 20px;
+	background-color: #EBE7D9;
+	display: flex;
+}
+.cnt_salas a:nth-child(1) .sala_ico{
+	background-color: #7F2629;
+}
+.cnt_salas a:nth-child(2) .sala_ico{
+	background-color: #CDA787;
+}
+.cnt_salas a:nth-child(3) .sala_ico{
+	background-color: #415364;
+}
+.cnt_salas a:nth-child(4) .sala_ico{
+	background-color: #8C9091;
+}
+.cnt_salas a:hover .sala_ico{
+	background-color: #EBE7D9;
+}
+.sala_ico div{
+	width: 100%;
+	display: flex;
+	height: 5.75vh;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 0.460vw;
+}
+.sala_ico i{
+	font-size: 5.5vw;
+	color: white;
+}
+.cnt_salas a:nth-child(1):hover .sala_ico i{
+	color: #7F2629;
+}
+.cnt_salas a:nth-child(2):hover .sala_ico i{
+	color: #CDA787;
+}
+.cnt_salas a:nth-child(3):hover .sala_ico i{
+	color: #415364;
+}
+.cnt_salas a:nth-child(4):hover .sala_ico i{
+	color: #8C9091;
+}
+.sala_nombre{
+	flex: 1;
+	height: 17%;
+	font-family: "Montserrat Medium";
+	font-size: 2.870vw;
+	padding-left: 5%;
+	margin-top: -7%;
+}
+.sala_body{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin-top: -4.8vh;
+}
+.linea_sala{
+	height: 1.30vh;
+	background-color: #3F2619;
+	border-radius: 0px 10px 10px 0px;
+}
+.bd_fn_titu{
+	width: 96.8%;
+	flex: 1;
+}
+.bd_titulo{
+	background-color: #EBE7D9;
+	min-height: 74%;
+	max-height: 74%;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	/* justify-content: flex-end; */
+	border-radius: 0px 0px 10px 0px;
+	padding-top: 22%;
+	padding-right: 6%;
+	padding-bottom: 3%;
+}
+.cnt_salas a:nth-child(1):hover .bd_titulo{
+	background-color: #7F2629;
+}
+.cnt_salas a:nth-child(2):hover .bd_titulo{
+	background-color: #CDA787;
+}
+.cnt_salas a:nth-child(3):hover .bd_titulo{
+	background-color: #415364;
+}
+.cnt_salas a:nth-child(4):hover .bd_titulo{
+	background-color: #8C9091;
+}
+.bd_titulo span{
+	width: 100%;
+	text-align: right;
+	font-family: "Montserrat Bold";
+	font-size: 3.241vw;
+	line-height: 3.241vw;
+}
+.cnt_salas a:hover .bd_titulo span{
+	color: #EBE7D9;
+}
+
+.cnt_salas .sala_imagen{
+	/* background-color: blue; */
+	flex: 1;
+}
+.cnt_salas .esp_2{
+	/* background-color: green; */
+	min-width: 9.26vw;
+}
+.text_extra{
+	font-family: "Montserrat Bold";
+	font-size: 2.593vw;
+	position: fixed;
+	width: 100%;
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	top: 50%; 
+	left: 45%;
+	text-align: center;
+}
+.cnt_salas .borde_sala_madera{	
+	padding: 2.778vw 2.778vw 0vh 2.778vw;
+	background-image: url('../img/borde_sala.png');
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.cnt_salas > a:nth-child(1) .borde_sala_madera{
+	background-image: url('../img/borde_sala_inicio.png');
+}
+.cnt_salas > a:nth-last-child(1) .borde_sala_madera{
+	padding: 2.778vw;
+	background-image: url('../img/borde_sala_fin.png');
+}
+.borde_sala_madera img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Estilos pagina de salas */
+#cnt_principal_sala{
+	background-image: url('../img/fondo_logo.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	flex-direction: column;
+	flex: 1;
+	height: 94.79%;
+	min-height: 320px;
+	display: flex;
+	overflow-y: hidden;
+}
+#cnt_principal_sala header{
+	background-color: rgba(255, 255, 255, 0.0);	
+	display: flex;
+	min-height: 15.89vh;
+	width: 100vw;
+	align-items: end;
+	border-bottom: 1.56vh solid black;
+	border-image-source: url('../img/border_bottom.png');
+	border-image-slice: 100;
+	border-top: 0px;
+	border-image-repeat: round;
+}
+#cnt_principal_sala .sala_1{
+	background-image: url('../img/fondo_sala_1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#cnt_principal_sala .sala_2{
+	background-image: url('../img/fondo_sala_2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#cnt_principal_sala .sala_3{
+	background-image: url('../img/fondo_sala_3.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#cnt_principal_sala .sala_4{
+	background-image: url('../img/fondo_sala_4.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#cnt_principal_sala section{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+#cnt_principal_sala section .cnt_sala_video{
+	flex: 1;
+	width: 84%;	
+	background-color: rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(92,92,92,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(92,92,92,1);
+	box-shadow: 0px 0px 10px 0px rgba(92,92,92,1);
+	border-radius: 20px 20px 0px 0px;
+	margin-top: -7vh;
+	z-index: 9000;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+}
+#cnt_principal_sala .linea_sala_video{
+	background-color: #3F2619;
+	width: 79.56%;
+	height: 1.30vh;
+	margin-top: -0.68vh;
+	border-radius: 20px 20px 20px 20px;
+}
+#cnt_principal_sala .nombre_sala{
+	min-height: 4.01vh;
+	width: 76.89%;
+	background-color: #EBE7D9;
+	border-radius: 0px 0px 12px 12px;
+	display: flex;
+	align-items: center;
+	padding-left: 4%;
+}
+#cnt_principal_sala .nombre_sala img{
+	max-width: 9.26vw;
+	margin-bottom: -5%;
+}
+#cnt_principal_sala .nombre_sala span{
+	flex: 1;
+	font-family: "Montserrat Bold";
+	font-size: 3.426vw;
+	line-height: 2.963vw;
+	color: #7F2629;
+	padding-left: 2%;
+}
+#cnt_principal_sala .sala_v_1 .nombre_sala span{
+	color: #7F2629;
+}
+#cnt_principal_sala .sala_v_2 .nombre_sala span{
+	color: #686058;
+}
+#cnt_principal_sala .sala_v_3 .nombre_sala span{
+	color: #415364;
+}
+#cnt_principal_sala .sala_v_4 .nombre_sala span{
+	color: #8C9091;
+	font-size: 3.226vw;
+}
+#cnt_principal_sala .sala_v_5 .nombre_sala span{
+	color: #3F2619;
+}
+#cnt_principal_sala .contenedor_videos{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	padding-left: 3.704vw;
+	padding-right: 3.704vw;
+	padding-bottom: 8vh;
+	max-height: 81vh;
+	/* height: 100%; */
+	overflow-y: scroll;
+}
+#cnt_principal_sala .contenedor_videos .cnt_video{
+	border: 0.6vw solid #7F2629;
+	/* min-height: 38.54vh; */
+	width: 100%;
+	margin-top: 3.704vw;
+	padding: 2.5vw;
+}
+#cnt_principal_sala .contenedor_videos .cnt_video:last-child{
+	margin-bottom: 100px;
+}
+#cnt_principal_sala .sala_v_2 .contenedor_videos .cnt_video{
+	border: 0.6vw solid #686058;
+}
+#cnt_principal_sala .sala_v_3 .contenedor_videos .cnt_video{
+	border: 0.6vw solid #415364;
+}
+#cnt_principal_sala .sala_v_4 .contenedor_videos .cnt_video{
+	border: 0.6vw solid #8C9091;
+}
+#cnt_principal_sala .sala_v_5 .contenedor_videos .cnt_video{
+	border: 0.6vw solid #3F2619;
+}
+#cnt_principal_sala .fuente_video{
+	/* min-height: 23.18vh; */
+}
+#cnt_principal_sala .fuente_video iframe{
+	width: 100%;
+	min-height: 100%;
+}
+#cnt_principal_sala .fuente_video video{
+	width: 100%;
+}
+#cnt_principal_sala .asterisk{
+	max-width: 9.91vw;
+	padding-bottom: 2.5vw;
+}
+#cnt_principal_sala .detalle_video{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: #000;
+}
+#cnt_principal_sala .detalle_video .titulo_video{
+	font-family: "Montserrat Bold";
+	font-size: 4.444vw;
+	line-height: 4.444vw;
+	color: #000;
+	padding-bottom: 1.5vw;
+}
+#cnt_principal_sala .sala_v_1 .detalle_video .titulo_video{
+	color: #7F2629;
+}
+#cnt_principal_sala .sala_v_2 .detalle_video .titulo_video{
+	color: #686058;
+}
+#cnt_principal_sala .sala_v_3 .detalle_video .titulo_video{
+	color: #415364;
+}
+#cnt_principal_sala .sala_v_4 .detalle_video .titulo_video{
+	color: #8C9091;
+}
+#cnt_principal_sala .sala_v_5 .detalle_video .titulo_video{
+	color: #3F2619;
+}
+#cnt_principal_sala .detalle_video .entrevistado{
+	font-family: "Montserrat Medium";
+	font-size: 2.315vw;
+	line-height: 5.463vw;
+}
+#cnt_principal_sala .detalle_video .entrevistado span{
+	font-family: "Montserrat Bold";
+	font-size: 2.315vw;
+	line-height: 5.463vw;
+}
+#cnt_principal_sala .detalle_video .informacion_video{
+	font-family: "Montserrat Regular";
+	font-size: 2.237vw;
+	line-height: 3.363vw;
+}
+#cnt_principal_sala .detalle_video .informacion_video p{
+	font-family: "Montserrat Regular";
+	font-size: 2.237vw;
+	line-height: 3.363vw;
+	margin-bottom: 0.52vh;
+}
+#cnt_principal_sala .detalle_video .informacion_video h1{
+	font-family: "Montserrat Regular";
+	font-size: 2.937vw;
+	line-height: 2.963vw;
+}
+#cnt_principal_sala .detalle_video .informacion_video h2{
+	font-family: "Montserrat Regular";
+	font-size: 2.737vw;
+	line-height: 2.763vw;
+}
+#cnt_principal_sala .detalle_video .informacion_video h3{
+	font-family: "Montserrat Regular";
+	font-size: 2.537vw;
+	line-height: 2.563vw;
+}
+#cnt_principal_sala .detalle_video .informacion_video ol{
+	margin-bottom: 0.52vh;
+}
+#cnt_principal_sala .detalle_video .informacion_video ul{
+	margin-bottom: 0.52vh;
+}
+
+/* Sala exterior */
+#cnt_principal_sala .sala_5{
+	background-image: url('../img/fondo_salas.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.sala_v_5 .nombre_sala{
+	padding: 0!important;
+	min-height:6.51vh!important;
+}
+.sala_v_5 .sala_cont_ico{
+	/* height: 100%; */
+	min-width: 12.5%;
+	max-width: 12.5%;
+	z-index: 7000;
+	margin-top: -8%;
+}
+.sala_v_5 .sala_cont_ico .sala_ico{
+	max-height: 6.51vh;
+	max-width: 7.50vw;
+	min-height: 6.51vh;
+	min-width: 7.50vw;
+	border-radius: 0 0 20px 20px;
+	background-color: #998543;
+	display: flex;
+}
+.sala_v_5 .cnt_salas a:nth-child(1) .sala_ico{
+	background-color: #7F2629;
+}
+.sala_v_5 .nombre_sala_5{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.sala_v_5 .nombre_sala img{
+	min-width: 18.45vw;
+	max-width: 18.45vw;
+	margin-left: -5%;
+	margin-top: -20%;
+	margin-right: 3%;
+}
+.sala_v_5 .nombre_sala_5 span{
+	display: flex;
+	flex: 1;
+}
+.sala_v_5 .nombre_sala_5 span:nth-child(1){
+	font-family: "Montserrat Bold"!important;
+	font-size: 4.630vw!important;
+	line-height: 5.556vw!important;
+	color: #3F2619!important;
+}
+.sala_v_5 .nombre_sala_5 span:nth-child(2){
+	font-family: "Montserrat Medium"!important;
+	font-size: 3.796vw!important;
+	line-height: 3.796vw!important;
+	color: #3F2619!important;
+}
+.sala_v_5 .contenedor_videos{
+	padding-bottom: 11vh!important;
+}
+
+
+#cnt_principal_exterior{
+	background-image: url('../img/fondo_logo.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: none;
+	flex-direction: column;
+	flex: 1;
+	height: 94.79%;
+	min-height: 320px;
+}
+#cnt_principal_exterior{
+	background-image: url('../img/fondo_sala_exterior.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+#cnt_principal_exterior section{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+#cnt_principal_exterior a{
+	background-color: white;
+	/* min-height: 13.66vh; */
+	flex: 1;
+	max-width: 84%;	
+	border-radius: 20px 20px 0px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+}
+#cnt_principal_exterior section .cnt_link_exterior{
+	flex: 1;
+	min-width: 84%;	
+	border-radius: 20px 20px 0px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cnt_link_exterior .linea_exterior{
+	background-color: #3F2619;
+	width: 96%;
+	height: 1.30vh;
+	margin-top: -0.68vh;
+	border-radius: 20px 20px 20px 20px;
+}
+.nombre_sala_exterior{
+	display: flex;
+	width: 94%;
+	background-color: #EBE7D9;
+	border-radius: 0px 0px 10px 10px;
+	padding-bottom: 2%;
+}
+.nombre_sala_exterior img{
+	min-width: 18.45vw;
+	max-width: 18.45vw;
+	margin-top: -15%;
+	margin-right: 3%;
+	margin-left: -6%;
+}
+.nombre_sala_exterior .nombre_sala_5{
+	padding-left: 5%;
+}
+.nombre_sala_exterior .nombre_sala_5 span{
+	display: flex;
+	flex: 1;
+}
+.nombre_sala_exterior .nombre_sala_5 span:nth-child(1){
+	font-family: "Montserrat Bold"!important;
+	font-size: 4.630vw!important;
+	line-height: 5.556vw!important;
+	color: #3F2619!important;
+}
+.nombre_sala_exterior .nombre_sala_5 span:nth-child(2){
+	font-family: "Montserrat Medium"!important;
+	font-size: 3.796vw!important;
+	line-height: 3.796vw!important;
+	color: #3F2619!important;
+}
+.nombre_sala_exterior .sala_cont_ico{
+	min-width: 12.5%;
+	max-width: 12.5%;
+	margin-top: -3.5%;
+}
+.nombre_sala_exterior .sala_cont_ico .sala_ico{
+	max-height: 6.51vh;
+	max-width: 7.50vw;
+	min-height: 6.51vh;
+	min-width: 7.50vw;
+	border-radius: 0 0 20px 20px;
+	background-color: #998543;
+	display: flex;
+}
+#cnt_principal_exterior  a:hover .sala_ico{
+	background-color: #EBE7D9;
+}
+#cnt_principal_exterior  a:hover .sala_ico i{
+	color: #998543;
+}
+#cnt_principal_exterior a:hover .nombre_sala_exterior{
+	background-color: #998543;
+}
+
+
+.info_sala_exterior p{
+	font-family: "Montserrat SemiBold"!important;
+	font-size: 2.90vw!important;
+	line-height: 2.90vw!important;
+	color: #3F2619!important;
+	margin: 0;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+/* Estilos footer */
+footer{
+	display: none;
+	/* display: flex; */
+	align-items: center;
+	justify-content: center;
+	min-height: 5.21%;
+	background-color: #3F2619;
+	color: white;
+}
+footer span{
+	font-family: "Montserrat SemiBold";
+	font-size: 2.130vw;
+}
+.sala_ico{
+	font-size: 40px;
+}
